@@ -1,0 +1,7 @@
+<view class="container"> 
+  <image src='{{src}}' class="abc"></image>
+  <text>{{name}}</text>
+  <button open-type='getUserInfo' bindgetuserinfo='getmyinfo'>点击获取头像和昵称</button>
+  <!-- open-type='getuserinfo'表示激活获取微信用户信息功能
+  bindgetuserinfo='getmyinfo'表示获得的数据将传递给自定义函数getmyinfo，名字自定义 -->
+</view>
