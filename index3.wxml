@@ -1,0 +1,15 @@
+<!-- 第一个区域:音频播放器 -->
+<audio id='myaudio'  controls src='{{src}}' poster="/image/fengshen.png"></audio>
+<!-- 第三个区域：视频列表 -->
+<!-- <swiper vertical='true' display-multiple-items='10'> -->
+<view class='videolist'>
+   <view class='videobar' wx:for='{{list}}'  wx:key="index" data-id="{{item.audiourl}}" bindtap='playaudio'>
+     <!-- <swiper-item> -->
+     <view class='videobar'>
+    <image src='/image/play.jpg'></image>
+    <text>{{item.id}}.{{item.title}}</text>
+    </view>
+    <!-- </swiper-item> -->
+  </view>
+ </view>
+<!-- </swiper> -->

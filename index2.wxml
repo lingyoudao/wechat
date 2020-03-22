@@ -1,0 +1,13 @@
+<!-- 第一个区域:音频播放器 -->
+<audio id='myaudio'  controls src='{{src}}' poster="/image/sanguo.png"></audio>
+
+<view class='videolist'>
+   <view class='videobar' wx:for='{{list}}'  wx:key="index" data-id="{{item.audiourl}}" bindtap='playaudio'>
+   
+     <view class='videobar'>
+    <image src='/image/play.jpg'></image>
+    <text>{{item.id}}.{{item.title}}</text>
+    </view>
+    
+  </view>
+ </view>

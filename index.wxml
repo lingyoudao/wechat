@@ -1,7 +1,14 @@
-<view class="container"> 
-  <image src='{{src}}' class="abc"></image>
-  <text>{{name}}</text>
-  <button open-type='getUserInfo' bindgetuserinfo='getmyinfo'>点击获取头像和昵称</button>
-  <!-- open-type='getuserinfo'表示激活获取微信用户信息功能
-  bindgetuserinfo='getmyinfo'表示获得的数据将传递给自定义函数getmyinfo，名字自定义 -->
-</view>
+<!-- 第一个区域:音频播放器 -->
+<audio id='myaudio'  controls src='{{src}}' poster="/image/xiyouji.png"></audio>
+<!-- 第三个区域：视频列表 -->
+
+<view class='videolist'>
+   <view class='videobar' wx:for='{{list}}'  wx:key="index" data-id="{{item.audiourl}}" bindtap='playaudio'>
+     
+     <view class='videobar'>
+    <image src='/image/play.jpg'></image>
+    <text>{{item.id}}.{{item.title}}</text>
+    </view>
+    
+  </view>
+ </view>
